@@ -23,7 +23,7 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             string textoTelegrama;
-            char tipoTelegrama = ' ';
+            char tipoTelegrama = 'o';						
             int numPalabras = 0;
             double coste;
 
@@ -39,7 +39,7 @@ namespace WindowsFormsApp1
                 if (numPalabras <= 10)
                     coste = 25;
                 else
-                    coste = 0.5 * numPalabras;
+                    coste = 2.5 + 0.5 * (numPalabras - 10);			
             else
             //Si el telegrama es urgente
             if (tipoTelegrama == 'u')
